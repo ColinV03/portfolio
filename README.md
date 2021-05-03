@@ -1,3 +1,14 @@
+# Welcome!
+
+This portfolio is to be used to show some things Ive learned recently! The project is created in react using the bootstrap CRA, and is designed with Material Design! Spend some time using, and check it out! 
+
+Thanks! 
+
+### Colin Varney 
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
