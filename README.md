@@ -1,6 +1,6 @@
 # Welcome!
 
-This portfolio is to be used to show some things Ive learned recently! The project is created in react using the bootstrap CRA, and is designed with Material Design! Spend some time using, and check it out! 
+This portfolio is to be used to show some things Ive learned recently! The project is created in react using the bootstrap CRA, and is designed with Tailwind CSS! Spend some time using, and check it out! 
 
 Thanks! 
 
