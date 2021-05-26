@@ -1,18 +1,21 @@
 // import logo from './logo.svg';
 import './App.css';
-import MiniDrawer from "./Components/Header"
-import About from "./Components/About"
+import Header from "./Components/Header";
+import About from "./Components/About";
+import ProjectPage from "./Components/Projects";
+import Contact from "./Components/Contact";
+import Footer from "./Components/Footer"
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <MiniDrawer></MiniDrawer>
-      
-      
-        <About className="aboutMe" />
-      
-      </header>
+      <Header />
+      <About />
+      <ProjectPage />
+      <Contact />
+      <Footer/>
 
       
     </div>
