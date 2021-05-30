@@ -32,6 +32,7 @@ class ContactForm extends Component {
 
   render() {
 
+    //storing form as a variable for boolean check in Ln: 129
     let form = (
       <div id="formJSX">
         <div class="lg:w-1/2 md:w-2/3 mx-auto">
@@ -88,16 +89,7 @@ class ContactForm extends Component {
                 Submit
               </button>
             </div>
-            <div class="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
-              <a
-                class="text-indigo-400"
-                href="mailto:cvcolinv@gmail.com?subject=Colin,+I+would+love+to+chat!"
-                target="_blank"
-              >
-                cvcolinv@gmail.com
-              </a>
-              <p class="leading-normal my-5">Ashland, KY</p>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -121,11 +113,24 @@ class ContactForm extends Component {
                 Contact Me
               </h1>
               <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
-                Leave your name and a contact method and I will get back to you
-                shortly.
+                Click on the email below, and I'd love to chat!
               </p>
             </div>
-            {this.state.submitted? thankYouMessage: form}
+            <div id="email-contact">
+              <div class="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
+                <a
+                  class="text-indigo-400"
+                  href="mailto:cvcolinv@gmail.com?subject=Colin,+I+would+love+to+chat!"
+                  target="_blank"
+                >
+                  cvcolinv@gmail.com
+                </a>
+                <p class="leading-normal my-5">Ashland, KY</p>
+              </div>
+            </div>
+            {/* <div id="form-visibility">
+              {this.state.submitted ? thankYouMessage : form}
+            </div> */}
           </div>
         </section>
       </div>
