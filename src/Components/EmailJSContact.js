@@ -5,9 +5,10 @@ import emailjs from "emailjs-com";
 
 export default function ContactForm() {
     const [IsSubmitted, setIsSubmitted] = useState(false)
-    const buttonHandler = () => {
-        setIsSubmitted(IsSubmitted => !IsSubmitted)
-    }
+    // const buttonHandler =() => {
+    //     setIsSubmitted(IsSubmitted => !IsSubmitted)
+        
+    // }
 
     useEffect(() => {
         console.log(IsSubmitted);
@@ -16,22 +17,23 @@ export default function ContactForm() {
     
     function sendEmail(e) {
         e.preventDefault();
+        setIsSubmitted(IsSubmitted => !IsSubmitted)
 
-        // emailjs
-        //     .sendForm(
-        //         "service_w2nhjni",
-        //         "template_sl0bjqa",
-        //         e.target,
-        //         "user_CU3aYIx3DNi3AX52HpjEB"
-        //     )
-        //     .then(
-        //         (result) => {
-        //             console.log(result.text);
-        //         },
-        //         (error) => {
-        //             console.log(error.text);
-        //         }
-        //     );
+        emailjs
+            .sendForm(
+                "service_w2nhjni",
+                "template_sl0bjqa",
+                e.target,
+                "user_CU3aYIx3DNi3AX52HpjEB"
+            )
+            .then(
+                (result) => {
+                    console.log(result.text);
+                },
+                (error) => {
+                    console.log(error.text);
+                }
+            );
         e.target.reset();
     };
 
@@ -89,7 +91,7 @@ export default function ContactForm() {
                 <button
                   class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
                             type="submit"
-                            onClick={buttonHandler}
+                            
               >
                 Submit
               </button>
