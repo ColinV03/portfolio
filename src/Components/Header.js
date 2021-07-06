@@ -1,6 +1,7 @@
 export default Headers = () => {
   return (
-    <div id="header">
+    <div id="header"
+    >
       <header class="sticky top-0 text-gray-400 bg-gray-900 body-font ">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
@@ -18,7 +19,7 @@ export default Headers = () => {
             </svg>
             <span class="ml-3 text-xl">Colin Varney</span>
           </a>
-          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center content-">
             <a class="mr-5 hover:text-white" href="#home">
               Home
             </a>
@@ -35,6 +36,19 @@ export default Headers = () => {
             >
               Contact
             </a>
+            {/* <div class=" flex justify-end items-center mb-12">
+              <label for="toogleA" class="flex items-center cursor-pointer">
+                <div class="relative">
+                  <input id="toogleA" type="checkbox" class="sr-only" />
+
+                  <div class="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
+
+                  <div class="dot absolute w-6 h-6 bg-white rounded-full shadow -left-1 -top-1 transition"></div>
+                </div>
+
+
+              </label>
+            </div> */}
           </nav>
         </div>
       </header>

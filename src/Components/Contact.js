@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import emailjs from "emailjs-com";
+
+
 
 
 class ContactForm extends Component {
@@ -11,6 +14,31 @@ class ContactForm extends Component {
       submitted: false, 
     };
   }
+ 
+
+  sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_w2nhjni",
+        "template_f6gkakb",
+        e.target,
+        "user_CU3aYIx3DNi3AX52HpjEB"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+    console.log(this.state)
+   
+  }
+      
 
   handleChange = (e) => {
     e.preventDefault();
@@ -19,16 +47,7 @@ class ContactForm extends Component {
     });
   };
 
-  handleSubmit = (e) => {
-    console.log(this.state);
-    e.preventDefault();
-    this.setState({
-      name: "",
-      email: "",
-      message: "",
-      submitted: true,
-    });
-  };
+ 
 
   render() {
 
@@ -37,6 +56,7 @@ class ContactForm extends Component {
       <div id="formJSX">
         <div class="lg:w-1/2 md:w-2/3 mx-auto">
           <div class="flex flex-wrap -m-2">
+            <form class="flex flex-wrap -m-2" onSubmit={this.sendEmail}>
             <div class="p-2 w-1/2">
               <div class="relative">
                 <label for="name" class="leading-7 text-sm text-gray-400">
@@ -82,13 +102,15 @@ class ContactForm extends Component {
               </div>
             </div>
             <div class="p-2 w-full">
-              <button
-                class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
-                onClick={this.handleSubmit}
+                <button
+                  class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                  onClick={this.sendEmail}
+                  type="submit"
               >
                 Submit
               </button>
-            </div>
+              </div>
+            </form>
             
           </div>
         </div>
@@ -105,7 +127,8 @@ class ContactForm extends Component {
 
     
     return (
-      <div id="contact">
+      <div id="contact" data-aos="zoom"
+        data-aos-duration="700">
         <section class="text-gray-400 bg-gray-900 body-font relative">
           <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-col text-center w-full mb-12">
@@ -115,6 +138,9 @@ class ContactForm extends Component {
               <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
                 Click on the email below, and I'd love to chat!
               </p>
+            </div>
+             <div id="form-visibility">
+              {this.state.submitted ? thankYouMessage : form}
             </div>
             <div id="email-contact">
               <div class="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
@@ -128,9 +154,7 @@ class ContactForm extends Component {
                 <p class="leading-normal my-5">Ashland, KY</p>
               </div>
             </div>
-            {/* <div id="form-visibility">
-              {this.state.submitted ? thankYouMessage : form}
-            </div> */}
+           
           </div>
         </section>
       </div>

@@ -11,6 +11,10 @@
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "aos": "^2.3.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemailer": "^6.6.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -47,5 +51,17 @@
     "gh-pages": "^3.2.0",
     "postcss": ">=8.2.10",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
+  },
+  "description": "This portfolio is to be used to show some things Ive learned recently! The project is created in react using the bootstrap CRA, and is designed with Tailwind CSS! Spend some time using, and check it out!",
+  "main": "craco.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ColinV03/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ColinV03/portfolio/issues"
   }
 }
