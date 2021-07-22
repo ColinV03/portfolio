@@ -1,7 +1,7 @@
+import React from 'react';
 export default Headers = () => {
   return (
-    <div id="header"
-    >
+    <div id="header">
       <header class="sticky top-0 text-gray-400 bg-gray-900 body-font ">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
@@ -20,19 +20,20 @@ export default Headers = () => {
             <span class="ml-3 text-xl">Colin Varney</span>
           </a>
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center content-">
-            <a class="mr-5 hover:text-white" href="#home">
+            <a class="mr-5 hover:text-white" href="#home" rel="noreferrer">
               Home
             </a>
-            <a class="mr-5 hover:text-white" href="#about">
+            <a class="mr-5 hover:text-white" href="#about" rel="noreferrer">
               About
             </a>
-            <a class="mr-5 hover:text-white" href="#projects">
+            <a class="mr-5 hover:text-white" href="#projects" rel="noreferrer">
               Projects
             </a>
             <a
               class="mr-5 hover:text-white"
               href="mailto:cvcolinv@gmail.com?subject=Colin,+I+would+love+to+chat!"
               target="_blank"
+              rel="noreferrer"
             >
               Contact
             </a>

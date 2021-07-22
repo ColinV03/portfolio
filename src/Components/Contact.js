@@ -127,8 +127,7 @@ class ContactForm extends Component {
 
     
     return (
-      <div id="contact" data-aos="zoom"
-        data-aos-duration="700">
+      <div id="contact" data-aos="zoom" data-aos-duration="700">
         <section class="text-gray-400 bg-gray-900 body-font relative">
           <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-col text-center w-full mb-12">
@@ -139,7 +138,7 @@ class ContactForm extends Component {
                 Click on the email below, and I'd love to chat!
               </p>
             </div>
-             <div id="form-visibility">
+            <div id="form-visibility">
               {this.state.submitted ? thankYouMessage : form}
             </div>
             <div id="email-contact">
@@ -148,13 +147,13 @@ class ContactForm extends Component {
                   class="text-indigo-400"
                   href="mailto:cvcolinv@gmail.com?subject=Colin,+I+would+love+to+chat!"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   cvcolinv@gmail.com
                 </a>
                 <p class="leading-normal my-5">Ashland, KY</p>
               </div>
             </div>
-           
           </div>
         </section>
       </div>

@@ -1,9 +1,10 @@
+import React from "react"
 // import logo from './logo.svg';
 import './App.css';
 import Header from "./Components/Header";
 import About from "./Components/About";
 import ProjectPage from "./Components/Projects";
-import Contact from "./Components/Contact";
+// import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import EmailJSContact from "./Components/EmailJSContact";
 
