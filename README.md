@@ -15,6 +15,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+To ensure that all packages are loaded correctly for the device, please install dependencies using
+
+### `npm i`
+
+
+Then, 
 In the project directory, you can run:
 
 ### `npm start`
